@@ -1,0 +1,578 @@
+{
+	"DisparateImpactRemover": {
+		"method": "disparate_impact_remover",
+		"default": {
+			"repair": 1
+		},
+		"tuning": {
+			"repair": [0, 0.1, 0.2, 0.4, 0.5, 0.6, 0.8, 1]
+		}
+	},
+
+
+	"LFR": {
+		"method": "lfr",
+		"default": {
+			"Ay": 1,
+			"Az": 50,
+			"k": 5
+		},
+		"tuning": {
+			"Ay": [0, 0.1, 0.5, 1, 5, 10],
+			"Az": [0, 0.1, 0.5, 1, 5, 10, 50],
+			"k": [5, 10]
+		}
+	},
+
+
+	"Reweighing": {
+		"method": "reweighing",
+		"default": {
+
+		},
+		"tuning": {
+
+		}
+	},
+
+
+	"AdversarialDebiasing": {
+		"method": "adversarial_debiasing",
+		"default": {
+			"weight": 0.1,
+			"debias": "True"
+		},
+		"tuning": {
+			"weight": [0.001, 0.01, 0.1, 0.2, 0.5],
+			"debias": ["True"]
+		}
+	},
+
+
+	"GerryFairClassifier": {
+		"method": "gerryfair",
+		"default": {
+			"gamma": 0.01
+		},
+		"tuning": {
+			"gamma": [0.005, 0.01, 0.015, 0.02, 0.25]
+		}
+	},
+
+
+	"MetaFairClassifier": {
+		"method": "metafair",
+		"default": {
+			"tau": 0.8
+		},
+		"tuning": {
+			"tau": [0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 1]
+		}
+	},
+
+
+	"PrejudiceRemover": {
+		"method": "prejudice_remover",
+		"default": {
+			"eta": 1
+		},
+		"tuning": {
+			"eta": [1, 5, 15, 30, 150]
+		}
+	},
+
+
+	"ExponentiatedGradientReduction": {
+		"method": "exponentiated_gradient_reduction",
+		"default": {
+			"eps": 0.01,
+			"eta": 2, 
+			"drop_prot_attr": "True"
+		},
+		"tuning": {
+			"eps": [0.1, 0.01, 0.001],
+			"eta": [1, 2, 5, 15],
+			"drop_prot_attr": ["True", "False"]
+		}
+	},
+
+
+	"GridSearchReduction": {
+		"method": "gridsearch_reduction",
+		"default": {
+			"weight": 0.5, 
+			"drop_prot_attr": "True"
+		},
+		"tuning": {
+			"weight": [0.2, 0.4, 0.5, 0.6, 0.8],
+			"drop_prot_attr": ["True", "False"]
+		}
+	},
+
+
+	"EqOddsPostprocessing": {
+		"method": "eqodds_postproc",
+		"default": {
+
+		},
+		"tuning": {
+
+		}
+	},
+
+
+	"CalibratedEqOddsPostprocessing": {
+		"method": "calibrated_eqodds_postproc",
+		"default": {
+
+		},
+		"tuning": {
+
+		}
+	},
+
+
+	"RejectOptionClassification": {
+		"method": "reject_option_class",
+		"default": {
+			"eps": 0.05
+
+		},
+		"tuning": {
+			"eps": [0.1, 0.01, 0.05, 0.001]
+		}
+	},
+
+
+	"FaX": {
+		"method": "fax",
+		"default": {
+
+		},
+		"tuning": {
+
+		}
+	},
+
+
+	"Fair-SMOTE": {
+		"method": "smote",
+		"default": {
+			"cr": 0.8,
+			"f": 0.8
+		},
+		"tuning": {
+			"cr": [0.2, 0.5, 0.8],
+			"f": [0.2, 0.5, 0.8]
+		}
+	},
+
+
+	"AdaFair": {
+		"method": "adafair",
+		"default": {
+			"iterations": 50,
+			"learning_rate": 1
+		},
+		"tuning": {
+			"iterations": [5, 10, 20, 30, 50, 100, 150, 200],
+			"learning_rate": [0.01, 0.1, 0.5, 0.7, 0.85, 1]
+		}
+	},
+
+
+	"FairGeneralizedLinearModel": {
+		"method": "fglm",
+		"default": {
+			"lam": 1e-3,
+			"family": "bernoulli",
+			"discretization": "equal_count"
+		},
+		"tuning": {
+			"lam": [0.001, 0.01, 0.1, 0.2, 0.4, 0.5, 0.6, 1, 5, 10],
+			"family": ["bernoulli", "multinomial"],
+			"discretization": ["equal_count"]
+		}
+	},
+
+
+	"SquaredDifferenceFairLogistic": {
+		"method": "squared_diff_fair_logistic",
+		"default": {
+			"lam": 1e-3
+		},
+		"tuning": {
+			"lam": [0.001, 0.01, 0.1, 0.2, 0.4, 0.5, 0.6, 1, 5, 10]
+		}
+	},
+
+
+	"FairnessConstraintModel": {
+		"method": "fairness_constraint_model",
+		"default": {
+			"c": 1e-3,
+			"tau": 0.5,
+			"mu": 1.2,
+			"eps": 1e-4
+		},
+		"tuning": {
+			"c": [0.001, 0.01, 0.1, 0.2, 0.4, 0.5, 0.6, 1, 5, 10],
+			"tau": [0.5],
+			"mu": [1.2],
+			"eps": [1e-4]
+		}
+	},
+
+
+	"DisparateMistreatmentModel": {
+		"method": "disparate_treatment_model",
+		"default": {
+			"c": 1e-3,
+			"tau": 0.5,
+			"mu": 1.2,
+			"eps": 1e-4
+		},
+		"tuning": {
+			"c": [0.001, 0.01, 0.1, 0.2, 0.4, 0.5, 0.6, 1, 5, 10],
+			"tau": [0.5],
+			"mu": [1.2],
+			"eps": [1e-4]
+		}
+	},
+
+
+	"ConvexFrameworkModel": {
+		"method": "convex_framework",
+		"default": {
+			"lam": 1e-3,
+			"family": "bernoulli",
+			"discretization": "group"
+		},
+		"tuning": {
+			"lam": [0.001, 0.01, 0.1, 0.2, 0.4, 0.5, 0.6, 1, 5, 10],
+			"family": ["bernoulli", "normal"],
+			"discretization": ["group"]
+		}
+	},
+
+
+	"HSICLinearRegression": {
+		"method": "hsic_linear_regression",
+		"default": {
+			"lam": 0.1
+		},
+		"tuning": {
+			"lam": [0.001, 0.01, 0.1, 0.2, 0.4, 0.5, 0.6, 1, 5, 10]
+		}
+	},
+
+
+	"GeneralFairERM": {
+		"method": "general_ferm",
+		"default": {
+			"eps": 0,
+			"k": 10
+		},
+		"tuning": {
+			"eps": [0.001, 0.01, 0.1, 0.2, 0.4, 0.5, 0.6, 1, 5, 10],
+			"k": [10]
+		}
+	},
+
+
+	"FAGTB": {
+		"method": "fagtb",
+		"default": {
+			"estimators": 300,
+			"learning": 0.01,
+			"lam": 0.15
+		},
+		"tuning": {
+			"estimators": [6, 20, 50, 100, 300],
+			"learning": [0.01, 0.1, 0.8, 1],
+			"lam": [0, 0.06, 0.15, 0.3, 0.5]
+		}
+	},
+
+
+	"JiangNachum": {
+		"method": "jiang_nachum",
+		"default": {
+			"iterations": 100,
+			"learning": 1
+		},
+		"tuning": {
+			"iterations": [6, 15, 30, 50, 100, 200],
+			"learning": [0.001, 0.01, 0.1, 0.5, 0.8, 0.98, 1]
+		}
+	},
+
+
+	"DPAbstention": {
+		"method": "dpabst",
+		"default": {
+			"alpha": 0.5
+		},
+		"tuning": {
+			"alpha": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+		}
+	},
+
+
+	"FairSSL-Lx": {
+		"method": "fairssl",
+		"default": {
+			"balancing": "True",
+			"cr": 0.8,
+			"f": 0.8,
+			"strategy": "LabelPropagation"
+		},
+		"tuning": {
+			"balancing": ["True", "False"],
+			"cr": [0.2, 0.5, 0.8],
+			"f": [0.2, 0.5, 0.8],
+			"ssl_type": ["LabelPropagation", "LabelSpreading"]
+		}
+	},
+
+
+	"FairSSL-xT": {
+		"method": "fairssl",
+		"default": {
+			"balancing": "True",
+			"cr": 0.8,
+			"f": 0.8,
+			"strategy": "CoTraining"
+		},
+		"tuning": {
+			"balancing": ["True", "False"],
+			"cr": [0.2, 0.5, 0.8],
+			"f": [0.2, 0.5, 0.8],
+			"ssl_type": ["CoTraining", "SelfTraining"]
+		}
+	},
+
+
+	"FairDummies": {
+		"method": "fair_dummies",
+		"default": {
+			"batch": 32,
+			"lr": 0.5,
+			"mu": 0.99999,
+			"second_scale": 0.01,
+			"epochs": 50,
+			"model_type": "linear_model"
+		},
+		"tuning": {
+			"batch": [64],
+			"lr": [0.4, 0.5, 0.65],
+			"mu": [0.5, 0.65, 0.8, 0.9, 0.98, 0.99999],
+			"second_scale": [0.01, 0.001, 0.00001],
+			"epochs": [50],
+			"model_type": ["linear_model"]
+		}
+	},
+
+
+	"HGR": {
+		"method": "hgr",
+		"default": {
+			"batch": 128,
+			"lr": 0.001,
+			"mu": 0.98,
+			"epochs": 50,
+			"model_type": "linear_model"
+		},
+		"tuning": {
+			"batch": [64],
+			"lr": [0.0001, 0.001, 0.01],
+			"mu": [0.5, 0.65, 0.8, 0.9, 0.98, 0.99999],
+			"epochs": [50],
+			"model_type": ["linear_model"]
+		}
+	},
+
+
+	"GetFair": {
+		"method": "getfair",
+		"default": {
+			"lam": 0.55,
+			"step_size": 0.04,
+			"episodes": 100,
+			"hidden_size": 10,
+			"layers": 1
+		},
+		"tuning": {
+			"lam": [0.3, 0.4, 0.5, 0.55, 0.7],
+			"step_size": [0.04],
+			"episodes": [100],
+			"hidden_size": [30],
+			"layers": [2]
+		}
+	},
+
+
+	"MultiAdversarialDebiasing": {
+		"method": "multi_adv_deb",
+		"default": {
+			"weight": 50
+		},
+		"tuning": {
+			"weight": [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+		}
+	},
+
+
+	"GradualCompatibility": {
+		"method": "grad_compat",
+		"default": {
+			"reg": 0,
+			"reg_val": 1,
+			"weight_init": "None",
+			"lambda": 0.0001
+		},
+		"tuning": {
+			"reg": [0, 1, 2, 3, 4, 5, 6, 7],
+			"reg_val": [1, 10, 25],
+			"weight_init": ["None"],
+			"lambda": [0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1]
+		}
+	},
+
+
+	"LTDD": {
+		"method": "ltdd",
+		"default": {
+			
+		},
+		"tuning": {
+			
+		}
+	},
+
+
+	"FairBayesDPP": {
+		"method": "fair_bayes_dpp",
+		"default": {
+			"n_epochs": 200,
+			"lr": 1e-1,
+			"batch_size": 512,
+			"n_seeds": 5
+		},
+		"tuning": {
+			"n_epochs": [200],
+			"lr": [1e-1, 5e-4, 1e-2, 1e-3],
+			"batch_size": [512],
+			"n_seeds": [5]
+		}
+	},
+
+
+	"LevEqOpp": {
+		"method": "lev_eq_opp",
+		"default": {
+
+		},
+		"tuning": {
+			
+		}
+	},
+
+
+	"FairRR": {
+		"method": "fair_rr",
+		"default": {
+			"level": 0.1
+		},
+		"tuning": {
+			"level": [0.006,0.012,0.03,0.045,0.06,0.09,0.12,0.15,0.18,0.21,0.24,0.27]
+		}
+	},
+
+
+	"GroupDebias": {
+		"method": "group_debias",
+		"default": {
+			"method": "None",
+			"n_estimators": 5,
+			"uniformity": 0.1,
+			"bootstrap": "False"
+		},
+		"tuning": {
+			"method": ["None", "Reweight", "Reduction", "Threshold"],
+			"n_estimators": [1, 5, 10],
+			"uniformity": [0.01, 0.1, 1],
+			"bootstrap": ["False"]
+		}
+	},
+
+
+	"FS": {
+		"method": "fesf",
+		"default": {
+			"K": 200
+		},
+		"tuning": {
+			"K": [50, 100, 200, 350]
+		}
+	},
+
+
+	"PFR": {
+		"method": "pfr",
+		"default": {
+			"gamma": 0.1
+		},
+		"tuning": {
+			"gamma": [0, 0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+		}
+	},
+
+
+	"iFlipper": {
+		"method": "iflipper",
+		"default": {
+			"num_plot": 0.2
+		},
+		"tuning": {
+			"num_plot": [1, 0.8, 0.6, 0.4, 0.2, 0.1, 0.05, 0.01, 0.001]
+		}
+	},
+
+
+	"fairret": {
+		"method": "fairret",
+		"default": {
+			"lam": 1,
+			"lr": 0.001,
+			"h_layer": 32
+		},
+		"tuning": {
+			"lam": [1, 0.1, 0.5, 0.8],
+			"lr": [0.0001, 0.001, 0.01],
+			"h_layer": [256, 128, 32]
+		}
+	},
+
+
+	"LogisticRegression": {
+		"method": "",
+		"default": {
+			
+		},
+		"tuning": {
+			
+		}
+	},
+
+
+	"LogisticRegressionRemoved": {
+		"method": "",
+		"default": {
+			
+		},
+		"tuning": {
+			
+		}
+	}
+}

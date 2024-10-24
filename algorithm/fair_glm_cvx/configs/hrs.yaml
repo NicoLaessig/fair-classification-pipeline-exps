@@ -1,0 +1,16 @@
+
+output: count
+
+seed: 0
+num_repeats: 20
+sensitive_predictor: False
+
+models:
+  FGLM:
+    param:
+      lam: [1e-3, 10., 11]
+    log_exp_grid: True
+  GLM:
+    param:
+      lam: [0., 0., 0]
+    log_exp_grid: False

@@ -1,0 +1,103 @@
+GLM:
+  marker: '*'
+  color: 'red'
+  alpha: 0.8
+  markersize: 14
+  linestyle: ':'
+  linewidth: 0.5
+
+FGLM:
+  marker: 'X'
+  color: 'black'
+  alpha: 0.6
+  markersize: 9
+  linestyle: '-'
+  linewidth: 0.8
+
+SVM:
+  marker: '8'
+  color: 'gray'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+FERM:
+  marker: 'p'
+  color: 'plum'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+GFERM:
+  marker: 'p'
+  color: 'plum'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+FC:
+  marker: 'd'
+  color: 'green'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+DM:
+  marker: 'o'
+  color: 'blue'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+HSIC:
+  marker: 'o'
+  color: 'blue'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+GF:
+  marker: 's'
+  color: 'darkred'
+  alpha: 0.7
+  markersize: 5
+  linestyle: ':'
+  linewidth: 0.5
+
+IF:
+  marker: 'p'
+  color: 'darkgreen'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+SD:
+  marker: 'D'
+  color: 'darkblue'
+  alpha: 0.7
+  markersize: 5
+  linestyle: ':'
+  linewidth: 0.5
+
+SP:
+  marker: 'v'
+  color: 'teal'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5
+
+BGL:
+  marker: '^'
+  color: 'orange'
+  alpha: 0.7
+  markersize: 7
+  linestyle: ':'
+  linewidth: 0.5

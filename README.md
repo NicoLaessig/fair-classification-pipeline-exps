@@ -4,6 +4,8 @@ This repository contains the codes needed to reproduce the experiments of our su
 
 ## General Information
 
+- `ICDE25 Extended Version.pdf` contains the extended version with the added experiments on varying bias distributionsof the synthetic datasets.<br />
+- Under `Summary` there are additional plots (similar to the results over time) in more detail about the scores of each algorithm over all datsets for the different metrics. Hereby, the scores of the optimized (both data preparation and hyperparameters) are displayed. The algorithms are sorted by the publication year.<br />
 - As this serves as an experimental & analysis paper, we evaluate different algorithms and thus reuse work from other GitHubs.<br />
 - For an easier reproducibility we put them in our repository under the algorithms subfolders.<br />
 - For some approaches, some slight adaptations had to be made to integrate them in our framework, but the general approach was not altered.<br />
